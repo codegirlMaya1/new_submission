@@ -1,6 +1,6 @@
 Customer Management App
 Overview
-This is a React-based test application designed to manage customer information. It includes features for adding, viewing, and deleting customers. The app also integrates with a cart system to manage products. Click on the ALL PRODUCTS page to add a product to the cart and also use the ALL PRODUCTS page to create a new product with name price and url of the product image, created products can also be added to the cart. FOR ADDITIONAL cart and order management PLEASE login/refresh for correlation between current and prior user history alongside current and prior order status of such users.
+This is a React-based test application designed to manage customer information. It includes features for adding, viewing, and deleting customers. The app also integrates with a cart system to manage products. Click on the ALL PRODUCTS page to add a product to the cart and also use the ALL PRODUCTS page to create a new product with name price and url of the product image, created products can also be added to the cart. FOR ADDITIONAL cart and order management PLEASE login/refresh for correlation between current and prior user history alongside current and prior order status of such users. This app is deployed on vercel https://new-submission-at2a.vercel.app
 
 Features
 Customer Form: Add new customers with their name, email, and phone number.
