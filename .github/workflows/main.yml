@@ -1,8 +1,8 @@
-name: CI and Deploy
+name: Build and Deploy
 
 on:
   push:
-    branches: [main, features]
+    branches: [main]
 
 jobs: 
   build:
@@ -40,7 +40,7 @@ jobs:
         run: npm run build
 
       - name: Run tests
-        run: npm test src/features/test
+        run: npm test src
 
   deploy:
     runs-on: ubuntu-latest
