@@ -5,20 +5,12 @@ import './Sidebar.css'; // We'll create this CSS file for styling
 
 const Sidebar = () => (
   <div className="sidebar">
-    <ul className="nav flex-column">
-      <li className="nav-item">
-        <Link className="nav-link" to="/admin">Add Product</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/customer">Customer</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/all-customers">All Customers</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/management">Management Database</Link>
-      </li>
-    </ul>
+    <nav className="nav flex-column">
+      <Link className="nav-link" to="/add-product">Add Product</Link>
+      <Link className="nav-link" to="/customer">Customer</Link>
+      <Link className="nav-link" to="/all-customers">All Customers</Link>
+      <Link className="nav-link" to="/management-database">Management Database</Link>
+    </nav>
   </div>
 );
 

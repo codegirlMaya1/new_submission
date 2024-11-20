@@ -19,21 +19,27 @@ const App = () => {
   return (
     <Router>
       <CartProvider>
-        <Navbar />
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/admin" element={isLoggedIn ? <Admin /> : <Navigate to="/login" />} />
-          <Route path="/customer" element={isLoggedIn ? <Customer /> : <Navigate to="/login" />} />
-          <Route path="/all-customers" element={isLoggedIn ? <AllCustomers /> : <Navigate to="/login" />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/new-order" element={isLoggedIn ? <NewOrder /> : <Navigate to="/login" />} />
-          <Route path="/account" element={isLoggedIn ? <UserAccount /> : <Navigate to="/login" />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+        <div className="app-container">
+          <Navbar />
+          <div className="main-container">
+            <Sidebar />
+            <div className="content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/admin" element={isLoggedIn ? <Admin /> : <Navigate to="/login" />} />
+                <Route path="/customer" element={isLoggedIn ? <Customer /> : <Navigate to="/login" />} />
+                <Route path="/all-customers" element={isLoggedIn ? <AllCustomers /> : <Navigate to="/login" />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/new-order" element={isLoggedIn ? <NewOrder /> : <Navigate to="/login" />} />
+                <Route path="/account" element={isLoggedIn ? <UserAccount /> : <Navigate to="/login" />} />
+                <Route path="/login" element={<Login />} />
+              </Routes>
+            </div>
+          </div>
+        </div>
       </CartProvider>
     </Router>
   );
 };
 
-export default App
+export default App;
