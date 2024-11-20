@@ -25,15 +25,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">ORDERS</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <Link className="navbar-brand" to="/">ALL PRODUCTS</Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link className="nav-link" to="/cart">{language === 'en' ? 'Cart' : 'Carrito'}</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/customer">{language === 'en' ? 'User Account' : 'Cuenta de Usuario'}</Link>
+            <Link className="nav-link" to="/account">{language === 'en' ? 'User Account' : 'Cuenta de Usuario'}</Link>
           </li>
           <li className="nav-item">
             {user ? (
@@ -47,7 +47,9 @@ const Navbar = () => {
           <option value="en">English</option>
           <option value="es">Español</option>
         </select>
-        <button onClick={handleLogout} className="btn btn-outline-danger ml-2">Logout</button>
+        {user && (
+          <button className="btn btn-outline-light ml-2" onClick={handleLogout}>Logout</button>
+        )}
       </div>
     </nav>
   );

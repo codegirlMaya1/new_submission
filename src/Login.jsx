@@ -29,18 +29,24 @@ const Login = () => {
     localStorage.setItem('customers', JSON.stringify(existingUsers));
     localStorage.setItem('user', JSON.stringify(user));
     setLoggedIn(true);
-    navigate('/products'); // Redirect to products page after login
+    navigate('/admin'); // Redirect to admin page after login
   };
 
   return (
     <div>
       <h2>Login</h2>
       {loggedIn ? (
-        <p>Login successfully! Return to Home</p>
+        <p>Login successfully! <a href="/">Return to Home</a></p>
       ) : (
         <form onSubmit={handleSubmit}>
-          <input type="text" name="username" value={credentials.username} onChange={handleChange} placeholder="Username" required />
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required />
+          <div>
+            <label>Username:</label>
+            <input type="text" name="username" value={credentials.username} onChange={handleChange} required />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+          </div>
           <button type="submit">Login</button>
         </form>
       )}

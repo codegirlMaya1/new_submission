@@ -7,7 +7,7 @@ const Sidebar = () => (
   <div className="sidebar">
     <ul className="nav flex-column">
       <li className="nav-item">
-        <Link className="nav-link" to="/admin">Admin</Link>
+        <Link className="nav-link" to="/admin">Add Product</Link>
       </li>
       <li className="nav-item">
         <Link className="nav-link" to="/customer">Customer</Link>

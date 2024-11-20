@@ -17,26 +17,23 @@ const App = () => {
   const isLoggedIn = !!localStorage.getItem('user');
 
   return (
-    <CartProvider>
-      <Router>
+    <Router>
+      <CartProvider>
         <Navbar />
         <Sidebar />
-        <div className="container" style={{ marginLeft: '250px', paddingTop: '60px' }}>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
-            <Route path="/admin" element={isLoggedIn ? <Admin /> : <Navigate to="/login" />} />
-            <Route path="/customer" element={isLoggedIn ? <Customer /> : <Navigate to="/login" />} />
-            <Route path="/all-customers" element={isLoggedIn ? <AllCustomers /> : <Navigate to="/login" />} />
-            <Route path="/cart" element={isLoggedIn ? <Cart /> : <Navigate to="/login" />} />
-            <Route path="/new-order" element={isLoggedIn ? <NewOrder /> : <Navigate to="/login" />} />
-            <Route path="/user-account" element={isLoggedIn ? <UserAccount /> : <Navigate to="/login" />} />
-          </Routes>
-        </div>
-      </Router>
-    </CartProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/admin" element={isLoggedIn ? <Admin /> : <Navigate to="/login" />} />
+          <Route path="/customer" element={isLoggedIn ? <Customer /> : <Navigate to="/login" />} />
+          <Route path="/all-customers" element={isLoggedIn ? <AllCustomers /> : <Navigate to="/login" />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/new-order" element={isLoggedIn ? <NewOrder /> : <Navigate to="/login" />} />
+          <Route path="/account" element={isLoggedIn ? <UserAccount /> : <Navigate to="/login" />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </CartProvider>
+    </Router>
   );
 };
 
-export default App;
+export default App
