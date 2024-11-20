@@ -6,10 +6,10 @@ import './Sidebar.css'; // We'll create this CSS file for styling
 const Sidebar = () => (
   <div className="sidebar">
     <nav className="nav flex-column">
-      <Link className="nav-link" to="/add-product">Add Product</Link>
+      
       <Link className="nav-link" to="/customer">Customer</Link>
       <Link className="nav-link" to="/all-customers">All Customers</Link>
-      <Link className="nav-link" to="/management-database">Management Database</Link>
+    
     </nav>
   </div>
 );
